@@ -34,4 +34,4 @@ def home(request):
 
 class UserDetailView(DetailView):
     model = User
-    template_name = "app/users/detail.html"
+    template_name="app/users/detail.html"
