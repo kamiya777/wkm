@@ -7,7 +7,7 @@ class UserForm(forms.ModelForm):
 
     class Meta:
         model=User
-        fields=("username","last_name","first_name","email",)
+        fields=("username", "last_name", "first_name", "email",)
 
 class ListForm(forms.ModelForm):
 
