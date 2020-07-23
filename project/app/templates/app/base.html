@@ -24,10 +24,13 @@
           <ul class="navbar-nav">
             {% if request.user.is_authenticated %}
             <span class="navbar-text">
-              <li class="nav-item">
-              <a class="nav-link" href="{% url 'app:users_detail' request.user.pk %}">{{ request.user.username }}</a>
-            </li>
+          <li class="nav-item">
+           <a class="nav-link" href="{% url 'app:users_detail' request.user.pk %}">{{ request.user.username }}</a>
+          </li>
             </span>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'app:lists_list' %}">リスト一覧</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'logout' %}">ログアウト</a>
             </li>

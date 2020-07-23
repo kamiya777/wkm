@@ -61,7 +61,7 @@ class ListCreateView(LoginRequiredMixin,CreateView):
     model = List
     template_name = "app/lists/create.html"
     form_class=ListForm
-    success_url = reverse_lazy("app:home")
+    success_url = reverse_lazy("app:lists_list")
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -69,4 +69,16 @@ class ListCreateView(LoginRequiredMixin,CreateView):
 
 class ListListView(LoginRequiredMixin, ListView):
     model = List
-    template_name = "app/lists/list.html"
+    template_name = "app\lists\list.html"
+
+class ListDetailView(LoginRequiredMixin,DetailView):
+    model=List
+    template_name="app/lists/detail.html"
+
+class ListUpdateView(LoginRequiredMixin,UpdateView):
+    model=List
+    template_name="app/lists/update.html"
+    form_class=ListForm
+
+    def get_success_url(self):
+        return resolve_url('app:lists_detail',pk=self.kwargs['pk'])
