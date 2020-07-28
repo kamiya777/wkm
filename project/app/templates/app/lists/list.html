@@ -5,7 +5,6 @@
   <div class="card-columns">
     {% for list in list_list %}
     <a href="{% url 'app:lists_detail' list.pk %}" class="card">
-    <div class="card">
       <div class="card-body">
         <h5 class="card-title">{{ list.title }}</h5>
         <footer>
