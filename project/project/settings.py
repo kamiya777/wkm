@@ -25,7 +25,7 @@ SECRET_KEY = 'n)9tlh-or=&t49j6hi$xc9=_z1q8c+41$7u=#@s8=u8y@e8#zd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://git.heroku.com/shielded-reaches-61034.git','127.0.0.1']
+ALLOWED_HOSTS = ['https://vast-shelf-47934.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -137,6 +137,7 @@ try:
     from config.local_settings import *
 except ImportError:
     pass
+
 if not DEBUG:
     import django_heroku
     django_heroku.settings(locals())
