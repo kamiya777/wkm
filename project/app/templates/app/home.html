@@ -1,9 +1,11 @@
 {% extends "app/base.html" %}
+
 {% block content %}
-<div class="container-fluid" style="display: table-cell !important">
+
+<div class="container-fluid home">
   <div class="row flex-nowrap">
     {% for list in list_list %}
-    <div class="bg-light m-3 p-2 " style="width: 240px; height: 100%">
+    <div class="bg-light m-3 p-2 list">
       <h4>{{ list.title }}
         <a href="{% url 'app:lists_update' list.pk %}" class="text-dark"><i class="far fa-edit fa-xs"></i></a>
         <a href="{% url 'app:lists_delete' list.pk %}" class="text-dark"><i class="far fa-trash-alt fa-xs"></i></a>
@@ -19,7 +21,7 @@
         </div>
       </a>
       {% endfor %}
-      <a href="{% url 'app:cards_create' %}" class="text-dark"><i class="farv fa-plus-square"></i>さらにカードを追加</a>
+      <a href="{% url 'app:cards_create_from_home' list.pk %}" class="text-dark"><i class="farv fa-plus-square"></i>さらにカードを追加</a>
     </div>
     {% endfor %}
   </div>
