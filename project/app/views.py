@@ -62,7 +62,7 @@ class ListCreateView(LoginRequiredMixin,CreateView):
     model = List
     template_name = "app/lists/create.html"
     form_class=ListForm
-    success_url = reverse_lazy("app:home")
+    success_url=reverse_lazy("app:home")
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -112,7 +112,7 @@ class CardUpdateVIew(LoginRequiredMixin,UpdateView):
     model=Card
     template_name="app/cards/update.html"
     form_class=CardForm
-    success_url=reverse_lazy("app;home")
+    success_url=reverse_lazy("app:home")
 
 class CardDeleteView(LoginRequiredMixin,DeleteView):
     model=Card

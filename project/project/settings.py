@@ -25,7 +25,7 @@ SECRET_KEY = 'n)9tlh-or=&t49j6hi$xc9=_z1q8c+41$7u=#@s8=u8y@e8#zd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://nameless-mesa-78209.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['https://kamiya-7py.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -85,7 +85,7 @@ DATABASES = {
 
 import dj_database_url
 db_from_env=dj_database_url.config()
-DATABASES['default'].updata(db_from_env)
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
