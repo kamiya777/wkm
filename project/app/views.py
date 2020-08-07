@@ -83,7 +83,7 @@ class ListUpdateView(LoginRequiredMixin,UpdateView):
     success_url=reverse_lazy("app:home")
 
 
-class ListDetailView(LoginRequiredMixin,DeleteView):
+class ListDeleteView(LoginRequiredMixin,DeleteView):
     model=List
     template_name="app/lists/delete.html"
     form_class=ListForm
