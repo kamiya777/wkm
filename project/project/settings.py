@@ -25,7 +25,7 @@ SECRET_KEY = 'n)9tlh-or=&t49j6hi$xc9=_z1q8c+41$7u=#@s8=u8y@e8#zd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['kamiya-7py.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['kamiya-django-1.herokuapp.com','127.0.0.1']
 
 # Application definition
 
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join('app','templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,7 +130,7 @@ LOGIN_REDIRECT_URL='app:home'
 LOGOUT_REDIRECT_URL = 'app:index'
 LOGIN_URL = 'login'
 
-DEBUG=True
+DEBUG=False 
 
 try:
     from config.local_settings import *

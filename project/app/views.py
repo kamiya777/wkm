@@ -69,8 +69,8 @@ class ListCreateView(LoginRequiredMixin,CreateView):
         return super().form_valid(form)
 
 class ListListView(LoginRequiredMixin, ListView):
-    model = List
-    template_name = "app\lists\list.html"
+    model=List
+    template_name="app/lists/list.html"
 
 class ListDetailView(LoginRequiredMixin,DetailView):
     model=List
